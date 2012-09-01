@@ -1,0 +1,4 @@
+port = 7777
+posts_path = "~/catsup/_posts"
+webhook_url = "http://myblog.com/webhook"
+password = 'catsup'

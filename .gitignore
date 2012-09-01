@@ -1,5 +1,7 @@
 *.py[co]
 
+editor.conf
+
 # Packages
 *.egg
 *.egg-info
