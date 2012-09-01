@@ -28,7 +28,7 @@ class MainHandler(tornado.web.RequestHandler):
         open(fpath, 'w').write(content)
         
         request = tornado.httpclient.HTTPRequest(options.webhook_url, "POST")
-        http_client = httpclient.AsyncHTTPClient()
+        http_client = tornado.httpclient.AsyncHTTPClient()
         http_client.fetch(request, None)
         
 
