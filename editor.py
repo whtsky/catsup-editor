@@ -33,9 +33,10 @@ class MainHandler(tornado.web.RequestHandler):
         
 
 if __name__ == '__main__':
-    tornado.options.parse_config_file("editor.conf")
-    tornado.options.parse_command_line()
     base_path = os.path.dirname(__file__)
+    conf_path = os.path.join(base_path, "editor.conf")
+    tornado.options.parse_config_file(conf_path)
+    tornado.options.parse_command_line()
     application = tornado.web.Application([
             (r'/', MainHandler),
         ], debug=True,
